@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Shamrock Music Shoppe</title>
+	<link rel="shortcut icon" href="<%= home_path() %>images/favicon.png" />
+	<%= javascript_include_tag 'jquery-1.4.1.min', 'application' %>
+  <%= stylesheet_link_tag 'app' %>
+	<!--[if IE 6]>
+		<%= stylesheet_link_tag 'ie6' %>
+	<![endif]-->
+	<%= yield :head %>
+</head>
+
+<body>
+	<div id="ie_pwnage">
+		Please upgrade to one of these <strong>free</strong> browsers:<br/>
+		<div>- <%= link_to('Firefox', 'http://getfirefox.com') %></div>
+		<div>- <%= link_to('Chrome', 'http://google.com/chrome') %></div>
+		<div>- <%= link_to('IE8', 'http://www.microsoft.com/windows/internet-explorer/default.aspx') %></div>
+  </div>
+	<div id="wrap">
+		<div id="main" class="clearfix">
+			<div id="header">
+				<div id="header-insides">
+					<%= link_to(image_tag('/images/logo.jpg', :id => 'logo'), home_path) %>
+					<ul id="nav">
+						<li class="first">
+							<%= link_to('home', home_path) %>
+						</li>
+						<li>
+							<%= link_to("shop", home_path) %>
+						</li>
+						<li>
+							<%= link_to("consignment", home_path) %>
+						</li>
+						<li>
+							<%= link_to("accessories", home_path) %>
+						</li>
+						<li>
+							<%= link_to("recording", home_path) %>
+						</li>
+						<li class="last">
+							<%= link_to("classes", home_path) %>
+						</li>
+					</ul>
+				</div>
+		  </div>
+		  <div id="centered">
+				<div id="mid">
+					<div id="mid-left">
+						<div id="store-info">
+							<h3>Shop our online store or come visit us!</h3>
+							<div class="globe">
+								<div>1234 Road St.</div>
+								<div>Purceville, VA 12345</div>
+								<div><a href="#">directions</a></div>
+							</div>
+							<div class="phone">
+								(703) 123-4567
+							</div>
+						</div>
+						<div id="store-story">
+							<p>
+								Shamrock Music Shoppe is your friendly store for
+								all of your music needs.
+							</p>
+							<p>
+								We sell quality products, provide friendly customer
+								service, and love music as much as you do!
+							</p>
+							<p>
+								Here is some more text about what SMS is!
+							</p>
+						</div>
+					</div>
+					<div id="mid-right">
+						<%= yield %>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+  </div>	
+	<div id="footer">
+		<div id="footer-insides">
+			This is a <%= link_to('TwoGuys', 'http://weretwoguys.com') %> project.
+		</div>
+	</div>
+	
+</body>	
+</html>
